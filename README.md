@@ -29,7 +29,8 @@ Dalam proses pembuatan dan perancangan program ini, dibuatlah beberapa penyesuai
   Program disesuaikan agar tidak lagi membutuhkan input ID manual oleh pengguna ketika sistem sedang digunakan untuk melakukan pembuatan transaksi dan invoice untuk menghindari bentrokan data. Seluruh ID tersebut akan di-*generate* secara otomatis oleh sistem.  
 
 ## Latar Belakang Tujuan Pembuatan Program  
-**1. Masalah Operasional Industri Studio Fotografi**
+**1. Masalah Operasional Industri Studio Fotografi**  
+
 Usaha jasa studio fotografi modern terus berkembang seiring meningkatnya kebutuhan masyarakat akan dokumentasi momen penting (wisuda, *portrait*, hingga *wedding*). Namun, sebagian besar manajemen studio skala kecil hingga menengah masih mengandalkan pencatatan pesanan secara manual. Hal ini menimbulkan beberapa masalah operasional:
 - **Risiko Duplikasi & Kesalahan Data:** Pencatatan manual rentan terhadap kesalahan penulisan ID pesanan, nomor telepon klien, atau jadwal sesi yang bentrok antar-pelanggan.
 - **Kurangnya Transparansi Detail Paket:** Klien sering kali kesulitan membedakan spesifikasi antar-paket (misalnya beda durasi sesi untuk paket studio reguler vs jumlah kru untuk paket *event outdoor*).
