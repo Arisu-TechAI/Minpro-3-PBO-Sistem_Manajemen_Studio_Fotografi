@@ -28,7 +28,7 @@ Dalam proses pembuatan dan perancangan program ini, dibuatlah beberapa penyesuai
 - **Pembuatan konsep Otomatisasi ID**  
   Program disesuaikan agar tidak lagi membutuhkan input ID manual oleh pengguna ketika sistem sedang digunakan untuk melakukan pembuatan transaksi dan invoice untuk menghindari bentrokan data. Seluruh ID tersebut akan di-*generate* secara otomatis oleh sistem.  
 
-### Latar Belakang Tujuan Pembuatan Program  
+## Latar Belakang Tujuan Pembuatan Program  
 **1. Masalah Operasional Industri Studio Fotografi**
 Usaha jasa studio fotografi modern terus berkembang seiring meningkatnya kebutuhan masyarakat akan dokumentasi momen penting (wisuda, *portrait*, hingga *wedding*). Namun, sebagian besar manajemen studio skala kecil hingga menengah masih mengandalkan pencatatan pesanan secara manual. Hal ini menimbulkan beberapa masalah operasional:
 - **Risiko Duplikasi & Kesalahan Data:** Pencatatan manual rentan terhadap kesalahan penulisan ID pesanan, nomor telepon klien, atau jadwal sesi yang bentrok antar-pelanggan.
@@ -110,7 +110,7 @@ Pada program Studio Fotografi ini, penerapan Encapsulation dibuat pada **class C
 <img width="738" height="365" alt="Kode Encapsulation pada class client java" src="https://github.com/user-attachments/assets/5663b6b2-66e5-438e-83df-9b021c9ac4f5" />  
 pada pembuatan encapsulation tersebut, Seluruh atribut dideklarasikan menggunakan tingkat akses **private**. Agar data atribut ini dapat dibaca dari luar class **Client.java** ini, dibuatlah method akses kontrol menggunakan **_getter_** (**getNamaClient()**, sehingga data yang dibaca tetap terjamin keamanan nya dan terjaga kerahasiaannya.  
 
-## F. **Pembuatan Abstract Super-Class**  
+## F. **Pembuatan Abstract Class**  
 <img width="835" height="334" alt="Super-Class LayananFotografi java" src="https://github.com/user-attachments/assets/9188aaac-5893-4e98-b1b9-7c158b9e3bab" />  
 
 Class Abstract **LayananFotografi** dibuat sebagai kerangka dasar (**blueprint**) untuk menyatukan atribut umum seperti kode, nama, dan harga paket, sekaligus mencegah instansiasi langsung atas objek yang belum spesifik.
