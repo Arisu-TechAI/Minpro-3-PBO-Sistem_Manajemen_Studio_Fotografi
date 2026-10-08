@@ -15,7 +15,7 @@ Program ini mengimplementasikan konsep *Object-Oriented Programming* (OOP) mengg
 Program ini dirancang untuk memodelkan dan mengelola proses bisnis transaksi dan reservasi jasa fotografi pada sebuah studio foto secara terstruktur.  
 
 Pada pengembangan Mini Project 3 ini, Program dikembangkan lebih jauh dengan beberapa penyesuaian Kode program, terutama pada konsep penerapan
-<b>Polymorhphism, Abstraction, dan MVC,</b>  
+<b>Polymorhphism, Abstraction, MVC, dan Interface</b>  
 
 ## Penyesuaian dan Penyederhanaan Scope Program Minpro-1 ke Minpro-2  
 Dalam proses pembuatan dan perancangan program ini, dibuatlah beberapa penyesuaian dan penyederhanaan untuk meningkatkan efisiensi dan kebersihan kode dari rancangan awal yaitu :  
