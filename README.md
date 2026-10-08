@@ -135,6 +135,33 @@ Di dalamnya terdapat sebuah abstract method **_public abstract void detailLayana
 
      Secara struktur kode, **PaketEvent** merupakan subclass yang juga diturunkan dari **LayananFotografi** menggunakan deklarasi **extends**. class ini memiliki atribut spesifik **jumlahKru** dengan menerapkan enkapsulasi **private**. Lewat pemanggilan _super()_ pada konstruktornya, nilai-nilai dari atribut dasar dikirim ke superclass. class ini men-_override_ method **detailLayanan()** dengan bentuk polimorfisme tersendiri, yaitu mencetak jenis layanan outdoor beserta jumlah kru yang bertugas.
 
+
+# >> WHAT'S NEW ON MINI PROJECT 3 ? <<  
+
+Bagian ini berisi penjelasan update dari pengembangan program untuk tahap Mini Project-3  
+
+# Perbaikan Kode Program Sebelumnya
+## Perbaikan Validasi Input  
+Pada pembuatan program sebelumnya, masih terdapat kekurangan dalam proses input oleh pengguna, lebih tepatnya pada bagian **input Nama** dan **Tanggal Pesanan**. Pada kolom input tersebut, pengguna masih dapat memasukkan Nama atau Tanggal secara asal-asalan yang dapat menyebabkan isi record data menjadi berantakan dan tidak memiliki struktur yang jelas.  
+Pada tahap ini, dilakukan perbaikan program yang dimana **Input** yang boleh dimasukkan oleh pengguna sudah memiliki standarisasi input nya sendiri, sehingga pengguna harus memasukkan input yang sesuai dengan ketetapan yang dibuat dalam program.  
+
+<img width="711" height="243" alt="Input username minimal 3 huruf-angka" src="https://github.com/user-attachments/assets/19c3d553-e006-4195-a34b-9717504349e6" />  
+
+Misal pada input username pengguna, standarisasi yang dilakukan adalah pengguna wajib memasukkan username dengan minimal 3 karakter. Apabila username tersebut kurang dari 3 karakter, program akan meminta pengguna untuk menginput username lagi dengan benar.  
+Namun memang, pada validasi input username ini masih terdapat kekurangan, dimana pengguna dapat memasukkan username berupa angka dan spasi. Hal ini masih cenderung bisa menyebabkan ambiguitas pada data calon client nantinya.  
+
+<img width="643" height="282" alt="input tanggal pakai format bener" src="https://github.com/user-attachments/assets/86b4f659-bd53-45a2-9bbd-f648f8953141" />  
+
+Ada juga perbaikan input pada kolom tanggal. Kolom input telah dibuat agar memiliki standar format input yang harus pengguna masukkan. Misal pengguna hanya memasukkan angka biasa, maka program akan meminta pengguna untuk memasukkan format tanggal yang seharusnya.  
+
+# Penerapan Role Admin dan Klien  
+Program kini dibagi menjadi dua jenis role dalam sistem, yaitu **role Admin** dan **role Klien**.  
+Akun dengan **Role Admin** diatur agar dapat melakukan validasi pembayaran transaksi, melihat statistik penjualan, dan melihat semua _order_ jasa yang telah masuk.  
+Sedangkan **Role Klien** diatur untuk dapat membuat pesanan java Fotografi dan memeriksa status pesanan tersebut.
+
+
+
+
      
 
 
