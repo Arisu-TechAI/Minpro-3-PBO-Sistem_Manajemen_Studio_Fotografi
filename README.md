@@ -140,8 +140,8 @@ Di dalamnya terdapat sebuah abstract method **_public abstract void detailLayana
 
 Bagian ini berisi penjelasan update dari pengembangan program untuk tahap Mini Project-3  
 
-# Perbaikan Kode Program Sebelumnya
-## Perbaikan Validasi Input  
+## Perbaikan Kode Program Sebelumnya
+## 1. Perbaikan Validasi Input  
 Pada pembuatan program sebelumnya, masih terdapat kekurangan dalam proses input oleh pengguna, lebih tepatnya pada bagian **input Nama** dan **Tanggal Pesanan**. Pada kolom input tersebut, pengguna masih dapat memasukkan Nama atau Tanggal secara asal-asalan yang dapat menyebabkan isi record data menjadi berantakan dan tidak memiliki struktur yang jelas.  
 Pada tahap ini, dilakukan perbaikan program yang dimana **Input** yang boleh dimasukkan oleh pengguna sudah memiliki standarisasi input nya sendiri, sehingga pengguna harus memasukkan input yang sesuai dengan ketetapan yang dibuat dalam program.  
 
@@ -154,10 +154,37 @@ Namun memang, pada validasi input username ini masih terdapat kekurangan, dimana
 
 Ada juga perbaikan input pada kolom tanggal. Kolom input telah dibuat agar memiliki standar format input yang harus pengguna masukkan. Misal pengguna hanya memasukkan angka biasa, maka program akan meminta pengguna untuk memasukkan format tanggal yang seharusnya.  
 
-# Penerapan Role Admin dan Klien  
+## 2.  Penerapan Role Admin dan Klien  
 Program kini dibagi menjadi dua jenis role dalam sistem, yaitu **role Admin** dan **role Klien**.  
 Akun dengan **Role Admin** diatur agar dapat melakukan validasi pembayaran transaksi, melihat statistik penjualan, dan melihat semua _order_ jasa yang telah masuk.  
-Sedangkan **Role Klien** diatur untuk dapat membuat pesanan java Fotografi dan memeriksa status pesanan tersebut.
+
+<img width="476" height="235" alt="Menu Atmin" src="https://github.com/user-attachments/assets/9a6798d2-1804-4bdf-8c83-3d010b593a30" />  
+
+Sedangkan **Role Klien** diatur untuk dapat membuat pesanan java Fotografi dan memeriksa status pesanan tersebut.  
+
+<img width="509" height="226" alt="Menu Klien" src="https://github.com/user-attachments/assets/7d3628fc-a488-4316-a8d6-1da8e8babea9" />  
+
+## 3. Menerapkan Keyword Final pada Abstract Method  
+
+<img width="863" height="310" alt="Final Pada Abstract method" src="https://github.com/user-attachments/assets/9705de0b-19ab-457b-a914-92bdecfeefc8" />  
+
+Keyword Final di atas diterapkan pada class **LayananFotografi.java** yang merupakan salah satu Abstract class dalam program ini. Keyword final tersebut berfungsi agar Method pemanggil informasi jenis layanan tidak akan mengalami _**override**_ saat dipanggil oleh sub class.  
+
+## 4. Penambahan Class Baru Dalam Program  
+
+<img width="337" height="405" alt="Class baru utk Minpro 3" src="https://github.com/user-attachments/assets/889402b0-d1db-4f53-b628-a55186643d7d" />  
+
+Karena adanya penambahan beberapa fitur baru di dalam program, maka ditambahkan pula beberapa class baru yang digunakan untuk mengakomodir kebutuhan program tersebut, yaitu class **Akun, Admin, ClientVIP, dan** **PotonganHarga**.  
+  - **Class Akun**        : adalah class induk yang berisi atribut umum dari seluruh pengguna sistem seperti admin dan klien.
+  - **Class Admin**       : adalah sub-class dari **AKUN** yang berfungsi untuk mengakomodasi kebutuhan role admin yang bertugas mengelola transaksi jasa studio fotografi ini.
+  - **Class ClientVIP**   : adalah sub-class baru dari class **Client**. Bedanya dari class client ada pada jenis pelanggan nya, dimana client dikategorikan sebagai pelanggan reguler, sedangkan clientVIP dikategorikan sebagai pelanggan khusus, sehingga memiliki kesempatan mendapatkan diskon harga jasa.
+  - **class PotonganHarga** : Merupakan interface baru untuk menghitung diskon khusus pelanggan dengan kategori VIP.
+
+
+
+
+
+
 
 
 
