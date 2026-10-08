@@ -141,7 +141,7 @@ Di dalamnya terdapat sebuah abstract method **_public abstract void detailLayana
 Bagian ini berisi penjelasan update dari pengembangan program untuk tahap Mini Project-3  
 
 ## Perbaikan Kode Program Sebelumnya
-## 1. Perbaikan Validasi Input  
+## Perbaikan Validasi Input  
 Pada pembuatan program sebelumnya, masih terdapat kekurangan dalam proses input oleh pengguna, lebih tepatnya pada bagian **input Nama** dan **Tanggal Pesanan**. Pada kolom input tersebut, pengguna masih dapat memasukkan Nama atau Tanggal secara asal-asalan yang dapat menyebabkan isi record data menjadi berantakan dan tidak memiliki struktur yang jelas.  
 Pada tahap ini, dilakukan perbaikan program yang dimana **Input** yang boleh dimasukkan oleh pengguna sudah memiliki standarisasi input nya sendiri, sehingga pengguna harus memasukkan input yang sesuai dengan ketetapan yang dibuat dalam program.  
 
@@ -154,7 +154,7 @@ Namun memang, pada validasi input username ini masih terdapat kekurangan, dimana
 
 Ada juga perbaikan input pada kolom tanggal. Kolom input telah dibuat agar memiliki standar format input yang harus pengguna masukkan. Misal pengguna hanya memasukkan angka biasa, maka program akan meminta pengguna untuk memasukkan format tanggal yang seharusnya.  
 
-## 2.  Penerapan Role Admin dan Klien  
+## 1. Penerapan Role Admin dan Klien  
 Program kini dibagi menjadi dua jenis role dalam sistem, yaitu **role Admin** dan **role Klien**.  
 Akun dengan **Role Admin** diatur agar dapat melakukan validasi pembayaran transaksi, melihat statistik penjualan, dan melihat semua _order_ jasa yang telah masuk.  
 
@@ -164,13 +164,13 @@ Sedangkan **Role Klien** diatur untuk dapat membuat pesanan java Fotografi dan m
 
 <img width="509" height="226" alt="Menu Klien" src="https://github.com/user-attachments/assets/7d3628fc-a488-4316-a8d6-1da8e8babea9" />  
 
-## 3. Menerapkan Keyword Final pada Abstract Method  
+## 2. Menerapkan Keyword Final pada Abstract Method  
 
 <img width="863" height="310" alt="Final Pada Abstract method" src="https://github.com/user-attachments/assets/9705de0b-19ab-457b-a914-92bdecfeefc8" />  
 
 Keyword Final di atas diterapkan pada class **LayananFotografi.java** yang merupakan salah satu Abstract class dalam program ini. Keyword final tersebut berfungsi agar Method pemanggil informasi jenis layanan tidak akan mengalami _**override**_ saat dipanggil oleh sub class.  
 
-## 4. Penambahan Class Baru Dalam Program  
+## 3. Penambahan Class Baru Dalam Program  
 
 <img width="337" height="405" alt="Class baru utk Minpro 3" src="https://github.com/user-attachments/assets/889402b0-d1db-4f53-b628-a55186643d7d" />  
 
@@ -179,6 +179,53 @@ Karena adanya penambahan beberapa fitur baru di dalam program, maka ditambahkan 
   - **Class Admin**       : adalah sub-class dari **AKUN** yang berfungsi untuk mengakomodasi kebutuhan role admin yang bertugas mengelola transaksi jasa studio fotografi ini.
   - **Class ClientVIP**   : adalah sub-class baru dari class **Client**. Bedanya dari class client ada pada jenis pelanggan nya, dimana client dikategorikan sebagai pelanggan reguler, sedangkan clientVIP dikategorikan sebagai pelanggan khusus, sehingga memiliki kesempatan mendapatkan diskon harga jasa.
   - **class PotonganHarga** : Merupakan interface baru untuk menghitung diskon khusus pelanggan dengan kategori VIP.
+
+## 4. Penerapan Polymorphism  
+
+<img width="458" height="102" alt="Screenshot 2026-10-09 024439" src="https://github.com/user-attachments/assets/d7beec17-0602-472e-8ca6-b623dd0062f6" />  
+
+**A. Polymorphism Overriding**  
+Polymorphism terjadi pada method **tampilkanPeran()** yang berada di class **Akun** selaku class induk dari **Admin, Client** dan **ClientVIP**. Method tersebut berfungsi untuk menampilkan keterangan **Role** dari akun yang sedang digunakan user saat user membuka program.  
+
+<img width="535" height="141" alt="Screenshot 2026-10-09 024753" src="https://github.com/user-attachments/assets/fd2e2fcb-df26-4849-a056-204709651b0a" />  
+
+Misal pada class **Client**, Method di override agar dapat menampilkan pesan jenis role dari akun yang sedang digunakan pengguna, yaitu Klien Reguler.  
+
+**B. Polymorphism Overloading**  
+Overloading disini terjadi pada method **cetakStruk()** yang berada di class **Transaksi**.  
+
+<img width="998" height="298" alt="Overloading" src="https://github.com/user-attachments/assets/723635b9-4ca6-4c1c-96f8-823ef3451918" />  
+
+Overloading disini memungkinkan method untuk dapat mencetak transaksi yang dilakukan secara lebih detail sesuai kebutuhan.  
+
+## 5. Penerapan Abstraction  
+**A. Abstract Class**  
+
+<img width="498" height="299" alt="Abstract Class" src="https://github.com/user-attachments/assets/e935e066-9ea4-4c8b-a065-3f59bd785224" />  
+
+Contoh lain dari penerapan Abstract class ada pada class **Akun.java**, yang dimana class ini merupakan kelas induk yang menjadi dasar dari atribut kelas anak-anaknya. Kelas ini hanya boleh diinstansiasi secara umumnya saja, dan wajib diimplementasikan rincian lebih lanjut oleh sub-class nya.  
+
+**B. Abstract Method**  
+
+<img width="854" height="323" alt="Abstract Method" src="https://github.com/user-attachments/assets/9ee463b5-7bab-4dbe-8c0d-0009bafff9a7" />  
+
+Penerapan Abstract Method ini terdapat pada class **LayananFotografi**. Pada method **detailLayanan()** fungsinya adalah memanggil informasi umum mengenai jenis layanan jasa yang terdapat dalam program. Karena sifatnya Abstrak, maka method tersebut dapat diwariskan ke sub-class lain, seperti sub-class **PaketEvent** untuk menambahkan detail layanan misal tipe layanan (outdoor/on-site) dan jumlah kru yang diinginkan.  
+
+## 6. Penerapan Interface  
+
+<img width="832" height="265" alt="Interface" src="https://github.com/user-attachments/assets/a1aa586d-f18d-4743-a43b-724bf563f5ef" />  
+
+Secara fungsi bisnis dalam sistem, Interface **PotonganHarga** berfungsi untuk mengakomodasi fitur keanggotaan khusus (VIP). Interface ini bertindak sebagai mekanisme otomatis yang memberikan potongan harga (diskon sebesar 15%) kepada pelanggan VIP saat melakukan pemesanan paket fotografi.  
+Dengan adanya interface ini, sistem dapat secara fleksibel membedakan perhitungan total tagihan antara klien reguler dan klien VIP tanpa perlu merusak logika pembayaran dasar yang sudah ada.
+
+
+
+
+
+
+
+
+
 
 
 
